@@ -1,0 +1,28 @@
+runtime: php83
+
+#entrypoint: serve --workers=2 --enable-dynamic-workers path/to/index.php
+
+manual_scaling:
+  instances: 1
+
+handlers:
+  - url: /
+    static_files: index.html
+    upload: index\.html
+
+  # Serve a directory as a static resource.
+  - url: /styles
+    static_dir: styles
+  - url: /fonts
+    static_dir: fonts
+  - url: /images
+    static_dir: images
+
+  # Serve images & fonts as static resources.
+  - url: /(.+\.(gif|png|jpg|webp|woff2|html|xhtml))$
+    static_files: \1
+    upload: .+\.(gif|png|jpg|webp|woff2|html|xhtml)$
+
+  # Serve your app through a front controller at index.php or public/index.php.
+  - url: .*
+    script: auto
