@@ -1,13 +1,5 @@
-Domain - denisdavidovich.top by https://www.namesilo.com/account
-Hosting - Google App Engine 
+Personal - [Static Web Site](https://denisdavidovich.top)
 
-For deploy 
-```
-    gcloud app deploy
-```
+Hosting - [GitHub Pages](https://denis-davidovich.github.io/denisdavidovich.top/)
 
-To view
-
-```
-    gcloud app browse
-```
+Domain - [NameSilo.com](https://www.namesilo.com/account)
